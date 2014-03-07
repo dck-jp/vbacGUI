@@ -61,7 +61,7 @@
             this.metroButtonCompile.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButtonCompile.StyleManager = null;
             this.metroButtonCompile.TabIndex = 6;
-            this.metroButtonCompile.Text = "Compile";
+            this.metroButtonCompile.Text = "Combine";
             this.metroButtonCompile.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButtonCompile.Click += new System.EventHandler(this.metroButtonCompile_Click);
             // 
@@ -75,7 +75,7 @@
             this.metroButtonDecompile.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButtonDecompile.StyleManager = null;
             this.metroButtonDecompile.TabIndex = 7;
-            this.metroButtonDecompile.Text = "Decompile";
+            this.metroButtonDecompile.Text = "Decombine";
             this.metroButtonDecompile.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButtonDecompile.Click += new System.EventHandler(this.metroButtonDecompile_Click);
             // 
