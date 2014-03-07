@@ -76,6 +76,8 @@ namespace vbacGUI
 
         async private void metroButtonSearch_Click(object sender, EventArgs e)
         {
+            if (metroTextBoxSearchWord.Text == "") return;
+
             EnableUI(false);
             try
             {
@@ -110,6 +112,36 @@ namespace vbacGUI
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Core.Config.Save();
+        }
+
+        private void metroButtonOpenSourceDirectory_Click(object sender, EventArgs e)
+        {
+            var path = metroButtonBrowseSourceDirectory.Text == "" ? Environment.CurrentDirectory + @"\src" : metroButtonBrowseSourceDirectory.Text;
+            new Explorer().Execute(path);
+        }
+
+        private void metroButtonOpenBinaryDirectory_Click(object sender, EventArgs e)
+        {
+            var path = metroButtonBrowseBinaryDirectory.Text == "" ? Environment.CurrentDirectory + @"\bin" :  metroButtonBrowseBinaryDirectory.Text;
+            new Explorer().Execute(path);
+        }
+
+        private void metroButtonBrowseSourceDirectory_Click(object sender, EventArgs e)
+        {
+            var dlg = new FolderBrowserDialog();
+            if(dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                metroTextBoxSourceDirectory.Text = dlg.SelectedPath;
+            }
+        }
+
+        private void metroButtonBrowseBinaryDirectory_Click(object sender, EventArgs e)
+        {
+            var dlg = new FolderBrowserDialog();
+            if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                metroTextBoxBinaryDirectory.Text = dlg.SelectedPath;
+            }
         }
 
     }

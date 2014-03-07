@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\Explorer.cs" />
     <Compile Include="Command\pt.cs" />
     <Compile Include="Command\vbac.cs" />
     <Compile Include="Config.cs" />

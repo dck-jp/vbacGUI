@@ -82,7 +82,7 @@
             // metroButtonBrowseSourceDirectory
             // 
             this.metroButtonBrowseSourceDirectory.Highlight = false;
-            this.metroButtonBrowseSourceDirectory.Location = new System.Drawing.Point(441, 111);
+            this.metroButtonBrowseSourceDirectory.Location = new System.Drawing.Point(392, 111);
             this.metroButtonBrowseSourceDirectory.Margin = new System.Windows.Forms.Padding(2);
             this.metroButtonBrowseSourceDirectory.Name = "metroButtonBrowseSourceDirectory";
             this.metroButtonBrowseSourceDirectory.Size = new System.Drawing.Size(35, 39);
@@ -91,11 +91,12 @@
             this.metroButtonBrowseSourceDirectory.TabIndex = 0;
             this.metroButtonBrowseSourceDirectory.Text = "…";
             this.metroButtonBrowseSourceDirectory.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButtonBrowseSourceDirectory.Click += new System.EventHandler(this.metroButtonBrowseSourceDirectory_Click);
             // 
             // metroButtonBrowseBinaryDirectory
             // 
             this.metroButtonBrowseBinaryDirectory.Highlight = false;
-            this.metroButtonBrowseBinaryDirectory.Location = new System.Drawing.Point(441, 161);
+            this.metroButtonBrowseBinaryDirectory.Location = new System.Drawing.Point(392, 161);
             this.metroButtonBrowseBinaryDirectory.Margin = new System.Windows.Forms.Padding(2);
             this.metroButtonBrowseBinaryDirectory.Name = "metroButtonBrowseBinaryDirectory";
             this.metroButtonBrowseBinaryDirectory.Size = new System.Drawing.Size(35, 39);
@@ -104,6 +105,7 @@
             this.metroButtonBrowseBinaryDirectory.TabIndex = 1;
             this.metroButtonBrowseBinaryDirectory.Text = "…";
             this.metroButtonBrowseBinaryDirectory.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButtonBrowseBinaryDirectory.Click += new System.EventHandler(this.metroButtonBrowseBinaryDirectory_Click);
             // 
             // metroTextBoxSourceDirectory
             // 
@@ -116,7 +118,7 @@
             this.metroTextBoxSourceDirectory.Multiline = false;
             this.metroTextBoxSourceDirectory.Name = "metroTextBoxSourceDirectory";
             this.metroTextBoxSourceDirectory.SelectedText = "";
-            this.metroTextBoxSourceDirectory.Size = new System.Drawing.Size(416, 20);
+            this.metroTextBoxSourceDirectory.Size = new System.Drawing.Size(366, 20);
             this.metroTextBoxSourceDirectory.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBoxSourceDirectory.StyleManager = null;
             this.metroTextBoxSourceDirectory.TabIndex = 2;
@@ -134,7 +136,7 @@
             this.metroTextBoxBinaryDirectory.Multiline = false;
             this.metroTextBoxBinaryDirectory.Name = "metroTextBoxBinaryDirectory";
             this.metroTextBoxBinaryDirectory.SelectedText = "";
-            this.metroTextBoxBinaryDirectory.Size = new System.Drawing.Size(416, 20);
+            this.metroTextBoxBinaryDirectory.Size = new System.Drawing.Size(366, 20);
             this.metroTextBoxBinaryDirectory.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBoxBinaryDirectory.StyleManager = null;
             this.metroTextBoxBinaryDirectory.TabIndex = 3;
@@ -182,28 +184,30 @@
             // metroButtonOpenSourceDirectory
             // 
             this.metroButtonOpenSourceDirectory.Highlight = false;
-            this.metroButtonOpenSourceDirectory.Location = new System.Drawing.Point(481, 111);
+            this.metroButtonOpenSourceDirectory.Location = new System.Drawing.Point(431, 112);
             this.metroButtonOpenSourceDirectory.Margin = new System.Windows.Forms.Padding(2);
             this.metroButtonOpenSourceDirectory.Name = "metroButtonOpenSourceDirectory";
-            this.metroButtonOpenSourceDirectory.Size = new System.Drawing.Size(86, 38);
+            this.metroButtonOpenSourceDirectory.Size = new System.Drawing.Size(137, 38);
             this.metroButtonOpenSourceDirectory.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButtonOpenSourceDirectory.StyleManager = null;
             this.metroButtonOpenSourceDirectory.TabIndex = 8;
-            this.metroButtonOpenSourceDirectory.Text = "Open Folder";
+            this.metroButtonOpenSourceDirectory.Text = "Open in Explorer";
             this.metroButtonOpenSourceDirectory.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButtonOpenSourceDirectory.Click += new System.EventHandler(this.metroButtonOpenSourceDirectory_Click);
             // 
             // metroButtonOpenBinaryDirectory
             // 
             this.metroButtonOpenBinaryDirectory.Highlight = false;
-            this.metroButtonOpenBinaryDirectory.Location = new System.Drawing.Point(481, 161);
+            this.metroButtonOpenBinaryDirectory.Location = new System.Drawing.Point(431, 161);
             this.metroButtonOpenBinaryDirectory.Margin = new System.Windows.Forms.Padding(2);
             this.metroButtonOpenBinaryDirectory.Name = "metroButtonOpenBinaryDirectory";
-            this.metroButtonOpenBinaryDirectory.Size = new System.Drawing.Size(86, 40);
+            this.metroButtonOpenBinaryDirectory.Size = new System.Drawing.Size(136, 40);
             this.metroButtonOpenBinaryDirectory.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButtonOpenBinaryDirectory.StyleManager = null;
             this.metroButtonOpenBinaryDirectory.TabIndex = 9;
-            this.metroButtonOpenBinaryDirectory.Text = "Open Folder";
+            this.metroButtonOpenBinaryDirectory.Text = "Open in Explorer";
             this.metroButtonOpenBinaryDirectory.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButtonOpenBinaryDirectory.Click += new System.EventHandler(this.metroButtonOpenBinaryDirectory_Click);
             // 
             // metroToggleOptionCompact
             // 
@@ -389,7 +393,7 @@
             this.metroProgressSpinner.CustomBackground = false;
             this.metroProgressSpinner.Enabled = false;
             this.metroProgressSpinner.EnsureVisible = false;
-            this.metroProgressSpinner.Location = new System.Drawing.Point(443, 27);
+            this.metroProgressSpinner.Location = new System.Drawing.Point(431, 28);
             this.metroProgressSpinner.Margin = new System.Windows.Forms.Padding(2);
             this.metroProgressSpinner.Maximum = 100;
             this.metroProgressSpinner.Name = "metroProgressSpinner";
@@ -405,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 554);
+            this.ClientSize = new System.Drawing.Size(599, 554);
             this.Controls.Add(this.metroProgressSpinner);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
@@ -440,7 +444,6 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "vbac with pt GUI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

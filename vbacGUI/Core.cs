@@ -12,7 +12,7 @@ namespace vbacGUI
     {
         static public Config Config;
         static public FormMain FormMain;
-        static public readonly string Version = "0.0.1";
+        static public readonly string Version = "0.0.2";
     }
 
     static class Files
