@@ -116,13 +116,15 @@ namespace vbacGUI
 
         private void metroButtonOpenSourceDirectory_Click(object sender, EventArgs e)
         {
-            var path = metroButtonBrowseSourceDirectory.Text == "" ? Environment.CurrentDirectory + @"\src" : metroButtonBrowseSourceDirectory.Text;
+            var srcText = metroTextBoxSourceDirectory.Text;
+            var path = srcText == "" ? Environment.CurrentDirectory + @"\src" : srcText;
             new Explorer().Execute(path);
         }
 
         private void metroButtonOpenBinaryDirectory_Click(object sender, EventArgs e)
         {
-            var path = metroButtonBrowseBinaryDirectory.Text == "" ? Environment.CurrentDirectory + @"\bin" :  metroButtonBrowseBinaryDirectory.Text;
+            var binText = metroTextBoxBinaryDirectory.Text;
+            var path = binText == "" ? Environment.CurrentDirectory + @"\bin" : binText;
             new Explorer().Execute(path);
         }
 

@@ -13,7 +13,7 @@ namespace vbacGUI.Command
         {
             var p = new ProcessStartInfo();
             p.FileName = "explorer";
-            p.Arguments = "/e /select,\"" + path + "\"";
+            p.Arguments = "/e /select," + path;
             //ref : http://support.microsoft.com/kb/152457/ja
 
             Process.Start(p);
