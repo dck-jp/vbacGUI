@@ -44,6 +44,7 @@ namespace vbacGUI
             public string BinaryDirectory = "";
             public bool EnableCompact = false;
             public bool EnableVbaproj = false;
+            public bool EnableBackupBinary = false;
         }
 
         public ptConfig pt = new ptConfig();

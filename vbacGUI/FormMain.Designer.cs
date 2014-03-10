@@ -52,21 +52,32 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            this.metroLink2 = new MetroFramework.Controls.MetroLink();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLink3 = new MetroFramework.Controls.MetroLink();
-            this.metroLink4 = new MetroFramework.Controls.MetroLink();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLink5 = new MetroFramework.Controls.MetroLink();
-            this.metroLink6 = new MetroFramework.Controls.MetroLink();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLink6 = new MetroFramework.Controls.MetroLink();
+            this.metroLink4 = new MetroFramework.Controls.MetroLink();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLink5 = new MetroFramework.Controls.MetroLink();
+            this.metroLink3 = new MetroFramework.Controls.MetroLink();
+            this.metroLink2 = new MetroFramework.Controls.MetroLink();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelGUIVersion = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelvbacVersion = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelptVersion = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
+            this.metroToggleOptionBackupBinary = new MetroFramework.Controls.MetroToggle();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -435,22 +446,24 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(574, 540);
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(574, 527);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.StyleManager = null;
             this.metroTabControl1.TabIndex = 13;
             this.metroTabControl1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTabControl1.UseStyleColors = false;
+            this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.metroTile3);
             this.metroTabPage1.Controls.Add(this.metroTile1);
             this.metroTabPage1.Controls.Add(this.metroTile2);
+            this.metroTabPage1.Controls.Add(this.metroTile3);
             this.metroTabPage1.Controls.Add(this.metroButtonBrowseBinaryDirectory);
             this.metroTabPage1.Controls.Add(this.metroTextBoxSourceDirectory);
+            this.metroTabPage1.Controls.Add(this.metroToggleOptionBackupBinary);
             this.metroTabPage1.Controls.Add(this.metroToggleOptionVbaproj);
             this.metroTabPage1.Controls.Add(this.metroTextBoxSearchWord);
             this.metroTabPage1.Controls.Add(this.metroToggleOptionCompact);
@@ -461,6 +474,7 @@
             this.metroTabPage1.Controls.Add(this.metroLabel1);
             this.metroTabPage1.Controls.Add(this.metroButtonDecompile);
             this.metroTabPage1.Controls.Add(this.metroLabel5);
+            this.metroTabPage1.Controls.Add(this.metroLabel18);
             this.metroTabPage1.Controls.Add(this.metroLabel4);
             this.metroTabPage1.Controls.Add(this.metroButtonCompile);
             this.metroTabPage1.Controls.Add(this.metroLabel3);
@@ -473,7 +487,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(566, 498);
+            this.metroTabPage1.Size = new System.Drawing.Size(566, 485);
             this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabPage1.StyleManager = null;
             this.metroTabPage1.TabIndex = 0;
@@ -486,6 +500,15 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.metroLabelptVersion);
+            this.metroTabPage2.Controls.Add(this.metroLabelvbacVersion);
+            this.metroTabPage2.Controls.Add(this.metroLabelGUIVersion);
+            this.metroTabPage2.Controls.Add(this.metroTile6);
+            this.metroTabPage2.Controls.Add(this.metroTile5);
+            this.metroTabPage2.Controls.Add(this.metroTile4);
+            this.metroTabPage2.Controls.Add(this.metroLabel17);
+            this.metroTabPage2.Controls.Add(this.metroLabel16);
+            this.metroTabPage2.Controls.Add(this.metroLabel15);
             this.metroTabPage2.Controls.Add(this.metroLabel14);
             this.metroTabPage2.Controls.Add(this.metroLabel12);
             this.metroTabPage2.Controls.Add(this.metroLabel10);
@@ -508,7 +531,7 @@
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(566, 445);
+            this.metroTabPage2.Size = new System.Drawing.Size(566, 485);
             this.metroTabPage2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabPage2.StyleManager = null;
             this.metroTabPage2.TabIndex = 1;
@@ -519,245 +542,107 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // metroLabel6
+            // metroTile6
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.CustomBackground = false;
-            this.metroLabel6.CustomForeColor = false;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel6.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel6.Location = new System.Drawing.Point(19, 61);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(266, 19);
-            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel6.StyleManager = null;
-            this.metroLabel6.TabIndex = 2;
-            this.metroLabel6.Text = "vbac GUI  is created by D*isuke YAMAKAWA";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel6.UseStyleColors = false;
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.CustomBackground = false;
+            this.metroTile6.CustomForeColor = false;
+            this.metroTile6.Location = new System.Drawing.Point(3, 287);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.PaintTileCount = true;
+            this.metroTile6.Size = new System.Drawing.Size(75, 108);
+            this.metroTile6.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTile6.StyleManager = null;
+            this.metroTile6.TabIndex = 5;
+            this.metroTile6.Text = "pt";
+            this.metroTile6.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile6.TileCount = 0;
             // 
-            // metroLabel7
+            // metroTile5
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.CustomBackground = false;
-            this.metroLabel7.CustomForeColor = false;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel7.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel7.Location = new System.Drawing.Point(19, 163);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(322, 19);
-            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel7.StyleManager = null;
-            this.metroLabel7.TabIndex = 2;
-            this.metroLabel7.Text = "vbac (vbac is not VBA Compiler) is created by @igeta";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel7.UseStyleColors = false;
+            this.metroTile5.ActiveControl = null;
+            this.metroTile5.CustomBackground = false;
+            this.metroTile5.CustomForeColor = false;
+            this.metroTile5.Location = new System.Drawing.Point(3, 157);
+            this.metroTile5.Name = "metroTile5";
+            this.metroTile5.PaintTileCount = true;
+            this.metroTile5.Size = new System.Drawing.Size(75, 108);
+            this.metroTile5.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.metroTile5.StyleManager = null;
+            this.metroTile5.TabIndex = 5;
+            this.metroTile5.Text = "vbac";
+            this.metroTile5.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile5.TileCount = 0;
             // 
-            // metroLabel8
+            // metroTile4
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.CustomBackground = false;
-            this.metroLabel8.CustomForeColor = false;
-            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel8.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel8.Location = new System.Drawing.Point(19, 269);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(365, 19);
-            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel8.StyleManager = null;
-            this.metroLabel8.TabIndex = 2;
-            this.metroLabel8.Text = "pt (the Platinum Searcher) is created by @monochromegane";
-            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel8.UseStyleColors = false;
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.CustomBackground = false;
+            this.metroTile4.CustomForeColor = false;
+            this.metroTile4.Location = new System.Drawing.Point(3, 27);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.PaintTileCount = true;
+            this.metroTile4.Size = new System.Drawing.Size(75, 108);
+            this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile4.StyleManager = null;
+            this.metroTile4.TabIndex = 5;
+            this.metroTile4.Text = "vbac GUI";
+            this.metroTile4.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile4.TileCount = 0;
             // 
-            // metroLink1
+            // metroLabel17
             // 
-            this.metroLink1.CustomBackground = false;
-            this.metroLink1.CustomForeColor = false;
-            this.metroLink1.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroLink1.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroLink1.Location = new System.Drawing.Point(108, 92);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(197, 23);
-            this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLink1.StyleManager = null;
-            this.metroLink1.TabIndex = 3;
-            this.metroLink1.Text = "http://www.clockahead.com/";
-            this.metroLink1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLink1.UseStyleColors = false;
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.CustomBackground = false;
+            this.metroLabel17.CustomForeColor = false;
+            this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel17.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel17.Location = new System.Drawing.Point(126, 116);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel17.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel17.StyleManager = null;
+            this.metroLabel17.TabIndex = 4;
+            this.metroLabel17.Text = "Current Version:";
+            this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel17.UseStyleColors = false;
             // 
-            // metroLink2
+            // metroLabel16
             // 
-            this.metroLink2.CustomBackground = false;
-            this.metroLink2.CustomForeColor = false;
-            this.metroLink2.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroLink2.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroLink2.Location = new System.Drawing.Point(108, 121);
-            this.metroLink2.Name = "metroLink2";
-            this.metroLink2.Size = new System.Drawing.Size(233, 23);
-            this.metroLink2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLink2.StyleManager = null;
-            this.metroLink2.TabIndex = 3;
-            this.metroLink2.Text = "https://github.com/dck-jp/vbacGUI";
-            this.metroLink2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLink2.UseStyleColors = false;
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.CustomBackground = false;
+            this.metroLabel16.CustomForeColor = false;
+            this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel16.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel16.Location = new System.Drawing.Point(127, 246);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel16.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel16.StyleManager = null;
+            this.metroLabel16.TabIndex = 4;
+            this.metroLabel16.Text = "Current Version:";
+            this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel16.UseStyleColors = false;
             // 
-            // metroLabel9
+            // metroLabel15
             // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.CustomBackground = false;
-            this.metroLabel9.CustomForeColor = false;
-            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel9.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel9.Location = new System.Drawing.Point(62, 92);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(40, 19);
-            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel9.StyleManager = null;
-            this.metroLabel9.TabIndex = 4;
-            this.metroLabel9.Text = "WEB:";
-            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel9.UseStyleColors = false;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.CustomBackground = false;
-            this.metroLabel10.CustomForeColor = false;
-            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel10.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel10.Location = new System.Drawing.Point(62, 121);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel10.StyleManager = null;
-            this.metroLabel10.TabIndex = 4;
-            this.metroLabel10.Text = "Github:";
-            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel10.UseStyleColors = false;
-            // 
-            // metroLink3
-            // 
-            this.metroLink3.CustomBackground = false;
-            this.metroLink3.CustomForeColor = false;
-            this.metroLink3.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroLink3.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroLink3.Location = new System.Drawing.Point(108, 198);
-            this.metroLink3.Name = "metroLink3";
-            this.metroLink3.Size = new System.Drawing.Size(177, 23);
-            this.metroLink3.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLink3.StyleManager = null;
-            this.metroLink3.TabIndex = 3;
-            this.metroLink3.Text = "https://twitter.com/igeta/";
-            this.metroLink3.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLink3.UseStyleColors = false;
-            // 
-            // metroLink4
-            // 
-            this.metroLink4.CustomBackground = false;
-            this.metroLink4.CustomForeColor = false;
-            this.metroLink4.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroLink4.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroLink4.Location = new System.Drawing.Point(108, 227);
-            this.metroLink4.Name = "metroLink4";
-            this.metroLink4.Size = new System.Drawing.Size(241, 23);
-            this.metroLink4.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLink4.StyleManager = null;
-            this.metroLink4.TabIndex = 3;
-            this.metroLink4.Text = "https://github.com/vbaidiot/Ariawase";
-            this.metroLink4.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLink4.UseStyleColors = false;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.CustomBackground = false;
-            this.metroLabel11.CustomForeColor = false;
-            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel11.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel11.Location = new System.Drawing.Point(62, 198);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel11.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel11.StyleManager = null;
-            this.metroLabel11.TabIndex = 4;
-            this.metroLabel11.Text = "Twitter:";
-            this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel11.UseStyleColors = false;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.CustomBackground = false;
-            this.metroLabel12.CustomForeColor = false;
-            this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel12.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel12.Location = new System.Drawing.Point(62, 227);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel12.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel12.StyleManager = null;
-            this.metroLabel12.TabIndex = 4;
-            this.metroLabel12.Text = "Github:";
-            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel12.UseStyleColors = false;
-            // 
-            // metroLink5
-            // 
-            this.metroLink5.CustomBackground = false;
-            this.metroLink5.CustomForeColor = false;
-            this.metroLink5.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroLink5.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroLink5.Location = new System.Drawing.Point(108, 306);
-            this.metroLink5.Name = "metroLink5";
-            this.metroLink5.Size = new System.Drawing.Size(246, 23);
-            this.metroLink5.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLink5.StyleManager = null;
-            this.metroLink5.TabIndex = 3;
-            this.metroLink5.Text = "https://twitter.com/monochromegane";
-            this.metroLink5.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLink5.UseStyleColors = false;
-            // 
-            // metroLink6
-            // 
-            this.metroLink6.CustomBackground = false;
-            this.metroLink6.CustomForeColor = false;
-            this.metroLink6.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroLink6.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.metroLink6.Location = new System.Drawing.Point(108, 335);
-            this.metroLink6.Name = "metroLink6";
-            this.metroLink6.Size = new System.Drawing.Size(377, 23);
-            this.metroLink6.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLink6.StyleManager = null;
-            this.metroLink6.TabIndex = 3;
-            this.metroLink6.Text = "https://github.com/monochromegane/the_platinum_searcher";
-            this.metroLink6.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLink6.UseStyleColors = false;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.CustomBackground = false;
-            this.metroLabel13.CustomForeColor = false;
-            this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.metroLabel13.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel13.Location = new System.Drawing.Point(62, 306);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel13.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroLabel13.StyleManager = null;
-            this.metroLabel13.TabIndex = 4;
-            this.metroLabel13.Text = "Twitter:";
-            this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel13.UseStyleColors = false;
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.CustomBackground = false;
+            this.metroLabel15.CustomForeColor = false;
+            this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel15.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel15.Location = new System.Drawing.Point(126, 376);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel15.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel15.StyleManager = null;
+            this.metroLabel15.TabIndex = 4;
+            this.metroLabel15.Text = "Current Version:";
+            this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel15.UseStyleColors = false;
             // 
             // metroLabel14
             // 
@@ -767,7 +652,7 @@
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Medium;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.metroLabel14.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel14.Location = new System.Drawing.Point(62, 335);
+            this.metroLabel14.Location = new System.Drawing.Point(126, 345);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(50, 19);
             this.metroLabel14.Style = MetroFramework.MetroColorStyle.Blue;
@@ -776,6 +661,344 @@
             this.metroLabel14.Text = "Github:";
             this.metroLabel14.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel14.UseStyleColors = false;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.CustomBackground = false;
+            this.metroLabel12.CustomForeColor = false;
+            this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel12.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel12.Location = new System.Drawing.Point(127, 215);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel12.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel12.StyleManager = null;
+            this.metroLabel12.TabIndex = 4;
+            this.metroLabel12.Text = "Github:";
+            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel12.UseStyleColors = false;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.CustomBackground = false;
+            this.metroLabel10.CustomForeColor = false;
+            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel10.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel10.Location = new System.Drawing.Point(127, 84);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel10.StyleManager = null;
+            this.metroLabel10.TabIndex = 4;
+            this.metroLabel10.Text = "Github:";
+            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel10.UseStyleColors = false;
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.CustomBackground = false;
+            this.metroLabel13.CustomForeColor = false;
+            this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel13.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel13.Location = new System.Drawing.Point(126, 316);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel13.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel13.StyleManager = null;
+            this.metroLabel13.TabIndex = 4;
+            this.metroLabel13.Text = "Twitter:";
+            this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel13.UseStyleColors = false;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.CustomBackground = false;
+            this.metroLabel11.CustomForeColor = false;
+            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel11.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel11.Location = new System.Drawing.Point(127, 186);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel11.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel11.StyleManager = null;
+            this.metroLabel11.TabIndex = 4;
+            this.metroLabel11.Text = "Twitter:";
+            this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel11.UseStyleColors = false;
+            // 
+            // metroLink6
+            // 
+            this.metroLink6.CustomBackground = false;
+            this.metroLink6.CustomForeColor = false;
+            this.metroLink6.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroLink6.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.metroLink6.Location = new System.Drawing.Point(172, 345);
+            this.metroLink6.Name = "metroLink6";
+            this.metroLink6.Size = new System.Drawing.Size(377, 23);
+            this.metroLink6.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink6.StyleManager = null;
+            this.metroLink6.TabIndex = 3;
+            this.metroLink6.Text = "https://github.com/monochromegane/the_platinum_searcher";
+            this.metroLink6.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLink6.UseStyleColors = false;
+            this.metroLink6.Click += new System.EventHandler(this.metroLink6_Click);
+            // 
+            // metroLink4
+            // 
+            this.metroLink4.CustomBackground = false;
+            this.metroLink4.CustomForeColor = false;
+            this.metroLink4.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroLink4.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.metroLink4.Location = new System.Drawing.Point(173, 215);
+            this.metroLink4.Name = "metroLink4";
+            this.metroLink4.Size = new System.Drawing.Size(241, 23);
+            this.metroLink4.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink4.StyleManager = null;
+            this.metroLink4.TabIndex = 3;
+            this.metroLink4.Text = "https://github.com/vbaidiot/Ariawase";
+            this.metroLink4.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLink4.UseStyleColors = false;
+            this.metroLink4.Click += new System.EventHandler(this.metroLink4_Click);
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.CustomBackground = false;
+            this.metroLabel9.CustomForeColor = false;
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel9.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel9.Location = new System.Drawing.Point(127, 55);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel9.StyleManager = null;
+            this.metroLabel9.TabIndex = 4;
+            this.metroLabel9.Text = "WEB:";
+            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel9.UseStyleColors = false;
+            // 
+            // metroLink5
+            // 
+            this.metroLink5.CustomBackground = false;
+            this.metroLink5.CustomForeColor = false;
+            this.metroLink5.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroLink5.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.metroLink5.Location = new System.Drawing.Point(172, 316);
+            this.metroLink5.Name = "metroLink5";
+            this.metroLink5.Size = new System.Drawing.Size(246, 23);
+            this.metroLink5.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink5.StyleManager = null;
+            this.metroLink5.TabIndex = 3;
+            this.metroLink5.Text = "https://twitter.com/monochromegane";
+            this.metroLink5.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLink5.UseStyleColors = false;
+            this.metroLink5.Click += new System.EventHandler(this.metroLink5_Click);
+            // 
+            // metroLink3
+            // 
+            this.metroLink3.CustomBackground = false;
+            this.metroLink3.CustomForeColor = false;
+            this.metroLink3.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroLink3.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.metroLink3.Location = new System.Drawing.Point(173, 186);
+            this.metroLink3.Name = "metroLink3";
+            this.metroLink3.Size = new System.Drawing.Size(177, 23);
+            this.metroLink3.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink3.StyleManager = null;
+            this.metroLink3.TabIndex = 3;
+            this.metroLink3.Text = "https://twitter.com/igeta/";
+            this.metroLink3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLink3.UseStyleColors = false;
+            this.metroLink3.Click += new System.EventHandler(this.metroLink3_Click);
+            // 
+            // metroLink2
+            // 
+            this.metroLink2.CustomBackground = false;
+            this.metroLink2.CustomForeColor = false;
+            this.metroLink2.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroLink2.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.metroLink2.Location = new System.Drawing.Point(173, 84);
+            this.metroLink2.Name = "metroLink2";
+            this.metroLink2.Size = new System.Drawing.Size(233, 23);
+            this.metroLink2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink2.StyleManager = null;
+            this.metroLink2.TabIndex = 3;
+            this.metroLink2.Text = "https://github.com/dck-jp/vbacGUI";
+            this.metroLink2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLink2.UseStyleColors = false;
+            this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
+            // 
+            // metroLink1
+            // 
+            this.metroLink1.CustomBackground = false;
+            this.metroLink1.CustomForeColor = false;
+            this.metroLink1.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroLink1.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.metroLink1.Location = new System.Drawing.Point(173, 55);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.Size = new System.Drawing.Size(197, 23);
+            this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink1.StyleManager = null;
+            this.metroLink1.TabIndex = 3;
+            this.metroLink1.Text = "http://www.clockahead.com/";
+            this.metroLink1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLink1.UseStyleColors = false;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.CustomBackground = false;
+            this.metroLabel8.CustomForeColor = false;
+            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel8.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel8.Location = new System.Drawing.Point(84, 287);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(365, 19);
+            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel8.StyleManager = null;
+            this.metroLabel8.TabIndex = 2;
+            this.metroLabel8.Text = "pt (the Platinum Searcher) is created by @monochromegane";
+            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel8.UseStyleColors = false;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.CustomBackground = false;
+            this.metroLabel7.CustomForeColor = false;
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel7.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel7.Location = new System.Drawing.Point(84, 157);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(322, 19);
+            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel7.StyleManager = null;
+            this.metroLabel7.TabIndex = 2;
+            this.metroLabel7.Text = "vbac (vbac is not VBA Compiler) is created by @igeta";
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel7.UseStyleColors = false;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.CustomBackground = false;
+            this.metroLabel6.CustomForeColor = false;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel6.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel6.Location = new System.Drawing.Point(84, 27);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(266, 19);
+            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel6.StyleManager = null;
+            this.metroLabel6.TabIndex = 2;
+            this.metroLabel6.Text = "vbac GUI  is created by D*isuke YAMAKAWA";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel6.UseStyleColors = false;
+            // 
+            // metroLabelGUIVersion
+            // 
+            this.metroLabelGUIVersion.AutoSize = true;
+            this.metroLabelGUIVersion.CustomBackground = false;
+            this.metroLabelGUIVersion.CustomForeColor = false;
+            this.metroLabelGUIVersion.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabelGUIVersion.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabelGUIVersion.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabelGUIVersion.Location = new System.Drawing.Point(234, 116);
+            this.metroLabelGUIVersion.Name = "metroLabelGUIVersion";
+            this.metroLabelGUIVersion.Size = new System.Drawing.Size(40, 19);
+            this.metroLabelGUIVersion.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabelGUIVersion.StyleManager = null;
+            this.metroLabelGUIVersion.TabIndex = 6;
+            this.metroLabelGUIVersion.Text = "NULL";
+            this.metroLabelGUIVersion.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabelGUIVersion.UseStyleColors = false;
+            // 
+            // metroLabelvbacVersion
+            // 
+            this.metroLabelvbacVersion.AutoSize = true;
+            this.metroLabelvbacVersion.CustomBackground = false;
+            this.metroLabelvbacVersion.CustomForeColor = false;
+            this.metroLabelvbacVersion.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabelvbacVersion.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabelvbacVersion.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabelvbacVersion.Location = new System.Drawing.Point(235, 246);
+            this.metroLabelvbacVersion.Name = "metroLabelvbacVersion";
+            this.metroLabelvbacVersion.Size = new System.Drawing.Size(40, 19);
+            this.metroLabelvbacVersion.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabelvbacVersion.StyleManager = null;
+            this.metroLabelvbacVersion.TabIndex = 7;
+            this.metroLabelvbacVersion.Text = "NULL";
+            this.metroLabelvbacVersion.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabelvbacVersion.UseStyleColors = false;
+            // 
+            // metroLabelptVersion
+            // 
+            this.metroLabelptVersion.AutoSize = true;
+            this.metroLabelptVersion.CustomBackground = false;
+            this.metroLabelptVersion.CustomForeColor = false;
+            this.metroLabelptVersion.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabelptVersion.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabelptVersion.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabelptVersion.Location = new System.Drawing.Point(234, 376);
+            this.metroLabelptVersion.Name = "metroLabelptVersion";
+            this.metroLabelptVersion.Size = new System.Drawing.Size(40, 19);
+            this.metroLabelptVersion.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabelptVersion.StyleManager = null;
+            this.metroLabelptVersion.TabIndex = 8;
+            this.metroLabelptVersion.Text = "NULL";
+            this.metroLabelptVersion.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabelptVersion.UseStyleColors = false;
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.CustomBackground = false;
+            this.metroLabel18.CustomForeColor = false;
+            this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel18.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel18.Location = new System.Drawing.Point(293, 205);
+            this.metroLabel18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(92, 19);
+            this.metroLabel18.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel18.StyleManager = null;
+            this.metroLabel18.TabIndex = 5;
+            this.metroLabel18.Text = "Backup Binary";
+            this.metroLabel18.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel18.UseStyleColors = false;
+            // 
+            // metroToggleOptionBackupBinary
+            // 
+            this.metroToggleOptionBackupBinary.AutoSize = true;
+            this.metroToggleOptionBackupBinary.CustomBackground = false;
+            this.metroToggleOptionBackupBinary.DisplayStatus = true;
+            this.metroToggleOptionBackupBinary.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.metroToggleOptionBackupBinary.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.metroToggleOptionBackupBinary.Location = new System.Drawing.Point(413, 209);
+            this.metroToggleOptionBackupBinary.Margin = new System.Windows.Forms.Padding(2);
+            this.metroToggleOptionBackupBinary.Name = "metroToggleOptionBackupBinary";
+            this.metroToggleOptionBackupBinary.Size = new System.Drawing.Size(80, 17);
+            this.metroToggleOptionBackupBinary.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToggleOptionBackupBinary.StyleManager = null;
+            this.metroToggleOptionBackupBinary.TabIndex = 10;
+            this.metroToggleOptionBackupBinary.Text = "Off";
+            this.metroToggleOptionBackupBinary.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroToggleOptionBackupBinary.UseStyleColors = false;
+            this.metroToggleOptionBackupBinary.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -847,6 +1070,17 @@
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroTile metroTile6;
+        private MetroFramework.Controls.MetroTile metroTile5;
+        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroLabel metroLabel17;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MetroFramework.Controls.MetroLabel metroLabelptVersion;
+        private MetroFramework.Controls.MetroLabel metroLabelvbacVersion;
+        private MetroFramework.Controls.MetroLabel metroLabelGUIVersion;
+        private MetroFramework.Controls.MetroToggle metroToggleOptionBackupBinary;
+        private MetroFramework.Controls.MetroLabel metroLabel18;
     }
 }
 

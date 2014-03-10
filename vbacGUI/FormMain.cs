@@ -1,8 +1,10 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework.Controls;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +19,7 @@ namespace vbacGUI
         public FormMain()
         {
             InitializeComponent();
-            this.Text = "vbac GUI Ver." + Core.Version;
+            metroTabControl1.SelectedIndex = 0;
             Core.FormMain = this;
             Core.Config = Config.Load();
             SetConfig();
@@ -30,7 +32,8 @@ namespace vbacGUI
              metroTextBoxSourceDirectory.Text = Core.Config.vbac.SourceDirectory;
              metroTextBoxBinaryDirectory.Text = Core.Config.vbac.BinaryDirectory;
              metroToggleOptionCompact.Checked = Core.Config.vbac.EnableCompact;
-             metroToggleOptionVbaproj.Checked = Core.Config.vbac.EnableVbaproj; 
+             metroToggleOptionVbaproj.Checked = Core.Config.vbac.EnableVbaproj;
+             metroToggleOptionBackupBinary.Checked = Core.Config.vbac.EnableBackupBinary;
         }
 
         async private void metroButtonCompile_Click(object sender, EventArgs e)
@@ -38,14 +41,7 @@ namespace vbacGUI
             EnableUI(false);
             try
             {
-                await Task.Run(() =>
-                {
-                    new vbac().Build(
-                        Core.Config.vbac.SourceDirectory,
-                        Core.Config.vbac.BinaryDirectory,
-                        Core.Config.vbac.EnableCompact,
-                        Core.Config.vbac.EnableVbaproj);
-                });
+                await Task.Run(() => { new vbac().Build(Core.Config.vbac); });
             }
             finally
             {
@@ -58,14 +54,7 @@ namespace vbacGUI
             EnableUI(false);
             try
             {
-                await Task.Run(() =>
-                {
-                    new vbac().Debuild(
-                        Core.Config.vbac.SourceDirectory,
-                        Core.Config.vbac.BinaryDirectory,
-                        Core.Config.vbac.EnableCompact,
-                        Core.Config.vbac.EnableVbaproj);
-                });
+                await Task.Run(() => { new vbac().Debuild(Core.Config.vbac); });
             }
             finally
             {
@@ -107,6 +96,7 @@ namespace vbacGUI
             Core.Config.vbac.BinaryDirectory = metroTextBoxBinaryDirectory.Text;
             Core.Config.vbac.EnableCompact = metroToggleOptionCompact.Checked;
             Core.Config.vbac.EnableVbaproj = metroToggleOptionVbaproj.Checked;
+            Core.Config.vbac.EnableBackupBinary = metroToggleOptionBackupBinary.Checked;
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -144,6 +134,46 @@ namespace vbacGUI
             {
                 metroTextBoxBinaryDirectory.Text = dlg.SelectedPath;
             }
+        }
+
+        async private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (metroTabControl1.SelectedTab != metroTabPage2) return;
+
+            metroLabelGUIVersion.Text = Core.Version;
+            metroLabelvbacVersion.Text = await Task.Run(() => { return new vbac().Version; });
+            metroLabelptVersion.Text = await Task.Run(() => { return new pt().Version; });
+
+        }
+
+        private void metroLink6_Click(object sender, EventArgs e)
+        {
+            Process.Start(((MetroLink)sender).Text);
+        }
+
+        private void metroLink5_Click(object sender, EventArgs e)
+        {
+            Process.Start(((MetroLink)sender).Text);
+        }
+
+        private void metroLink4_Click(object sender, EventArgs e)
+        {
+            Process.Start(((MetroLink)sender).Text);
+        }
+
+        private void metroLink3_Click(object sender, EventArgs e)
+        {
+            Process.Start(((MetroLink)sender).Text);
+        }
+
+        private void metroLink2_Click(object sender, EventArgs e)
+        {
+            Process.Start(((MetroLink)sender).Text);
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            Process.Start(((MetroLink)sender).Text);
         }
 
     }
