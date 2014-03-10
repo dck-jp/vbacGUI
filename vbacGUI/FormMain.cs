@@ -26,6 +26,7 @@ namespace vbacGUI
             EnableUI(true);
         }
 
+
         private void SetConfig()
         {
              metroTextBoxSearchWord.Text=Core.Config.pt.searchWord ;
@@ -97,6 +98,21 @@ namespace vbacGUI
             Core.Config.vbac.EnableCompact = metroToggleOptionCompact.Checked;
             Core.Config.vbac.EnableVbaproj = metroToggleOptionVbaproj.Checked;
             Core.Config.vbac.EnableBackupBinary = metroToggleOptionBackupBinary.Checked;
+
+            Restrict_Win8_64bit();
+        }
+
+        private void Restrict_Win8_64bit()
+        {
+            if(Environment.OSVersion.VersionString.Contains("6.2") 
+                || Environment.OSVersion.VersionString.Contains("6.3") )
+            {
+                if( Environment.Is64BitOperatingSystem)
+                {
+                    metroToggleOptionVbaproj.Enabled = false;
+                    metroToggleOptionVbaproj.Checked = false;
+                }
+            }
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
